@@ -1,4 +1,4 @@
-<form (ngSubmit)="guardar(formulario)" #formulario="ngForm" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+<form>
     <div class="mb-4">
         <label for="correo" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
         <input 
@@ -6,6 +6,7 @@
             id="correo" 
             name="Correo" 
             [(ngModel)]="correo"
+            #correoModel="ngModel"
             placeholder="Ingrese su correo."
             class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required>
@@ -18,6 +19,7 @@
             id="nombre" 
             name="Nombre" 
             [(ngModel)]="nombre"
+            #nombreModel="ngModel"
             placeholder="Ingrese su nombre."
             class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required>
@@ -30,6 +32,7 @@
             id="telefono" 
             name="Teléfono" 
             [(ngModel)]="telefono"
+            #telefonoModel="ngModel"
             placeholder="Ingrese su número de contacto."
             class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required>

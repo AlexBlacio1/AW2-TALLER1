@@ -1,24 +1,37 @@
 import { Component, inject } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
-import { FormsModule}   from '@angular/forms';
+import { Router } from '@angular/router';  // Asegúrate de importar Router
+import { FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
   imports: [FormsModule],
   templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css'
+  styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
 
-  servicio = inject(ProductoService)
+  servicio = inject(ProductoService);
+  router = inject(Router); 
 
-  correo:any;
+  correo: any;
   nombre: any;
   telefono: any;
 
-  guardar( formulario:any){
-    console.log
-    this.servicio.postProducto(formulario.value).subscribe()
+  guardar(formulario: any) {
+    alert('¡Suscripción exitosa!');
+
+    
+
+    this.servicio.postProductos(formulario.value).subscribe(
+      response => {
+        console.log('Formulario enviado con éxito:', response);
+      },
+      error => {
+        console.error('Error al enviar formulario:', error);
+
+      }
+    );
   }
 
 }

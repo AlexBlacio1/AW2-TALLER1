@@ -11,7 +11,26 @@ export class ProductoService {
 
   private API_PRODUCTOS= "http://localhost:3000/Productos"
 
-  postProducto( producto: any ): Observable <any>{
+
+  getProductos():Observable<any>{
+    return this.http.get(this.API_PRODUCTOS)
+  }
+
+  getUnicoProducto(id:any):Observable<any>{
+    return this.http.get(`${this.API_PRODUCTOS}/${id}`)
+  }
+
+
+  postProductos(producto:any):Observable<any>{
     return this.http.post(this.API_PRODUCTOS, producto)
+  }
+
+
+  deleteProductos(id:any):Observable<any>{
+    return this.http.delete(`${this.API_PRODUCTOS}/${id}`)
+  }
+
+  putProductos(producto:any):Observable<any>{
+    return this.http.put(`${this.API_PRODUCTOS}/${producto.id}`,producto)
   }
 }
