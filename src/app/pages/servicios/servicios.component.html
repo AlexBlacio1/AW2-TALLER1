@@ -1,0 +1,12 @@
+<div class="mt-10 text-center px-6 bg-cover bg-center" style="background-image: url('ruta/a/tu/imagen.jpg');">
+    <h2 class="text-3xl font-bold text-gray-900">Nuestros Servicios</h2>
+    
+    <div class="flex flex-col gap-6 mt-8 mx-auto max-w-screen-xl">
+        <div *ngFor="let servicio of servicios" 
+            class="w-full border border-gray-300 rounded-xl shadow-lg p-6 text-gray-900 transition-transform transform hover:scale-105 hover:shadow-2xl">
+            
+            <h5 class="text-2xl font-bold">{{ servicio.titulo }}</h5>
+            <p class="mt-2 text-sm">{{ servicio.descripcion }}</p>
+        </div>
+    </div>
+</div>

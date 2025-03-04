@@ -1,0 +1,15 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  @for (empleado of empleados; track empleado) {
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+    <img
+            src="{{empleado.images.main}}"
+      alt="Imagen 1"
+    />
+    <div class="p-5">
+      <h5 class="text-lg font-bold">Nombre: {{empleado.name.first}} {{empleado.name.middle}} {{empleado.name.last}}</h5>
+      <p class="text-gray-700">Profesión: {{empleado.occupation}}</p>
+      <p class="text-gray-700">Género: {{empleado.gender}}</p>
+    </div>
+  </div>
+}
+</div>
