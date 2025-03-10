@@ -12,6 +12,9 @@ import { GaleriaProductosComponent } from './components/galeria-productos/galeri
 import { AddProductoComponent } from './components/add-producto/add-producto.component';
 import { FormularioProductosComponent } from './components/formulario-productos/formulario-productos.component';
 import { GestionProductosComponent } from './components/gestion-productos/gestion-productos.component';
+import { LoginComponent } from './pages/login/login.component';
+import { loginGuard } from './guards/login.guard';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -23,7 +26,9 @@ export const routes: Routes = [
     {path: 'contactos', component: ContactosComponent},
     {path: 'nosotros', component: NosotrosComponent},
     {path: 'productos', component: GaleriaProductosComponent},
-    {path: 'addproducto', component: GestionProductosComponent},
+    {path: 'addproducto', component: GestionProductosComponent, canActivate:[loginGuard]},
+    {path: 'login', component:LoginComponent},
+    { path: 'carrito', component: CarritoComponent },
 
     { path: '', component: HomeComponent, pathMatch: 'full' },
     {path: '**', component: Error404Component}

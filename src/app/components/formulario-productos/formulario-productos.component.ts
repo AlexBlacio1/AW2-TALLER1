@@ -18,7 +18,7 @@ export class FormularioProductosComponent {
   imagen: any;
 
   productos: any;
-  registroExitoso: boolean = false; // ✅ Variable para la alerta
+  registroExitoso: boolean = false;
 
   servicio = inject(ProductoService);
 
@@ -26,14 +26,13 @@ export class FormularioProductosComponent {
     if (formulario.valid) {
       console.log(formulario.value);
       this.servicio.postProductos(formulario.value).subscribe(() => {
-        this.registroExitoso = true; // ✅ Muestra la alerta
+        this.registroExitoso = true;
 
-        // Oculta la alerta después de 3 segundos
         setTimeout(() => {
           this.registroExitoso = false;
         }, 3000);
 
-        formulario.resetForm(); // ✅ Limpia el formulario
+        formulario.resetForm();
       });
     }
   }

@@ -12,4 +12,8 @@ import { VistaProductoComponent } from '../vista-producto/vista-producto.compone
 })
 export class GestionProductosComponent {
 
+  logout(){
+    localStorage.setItem("login","false")
+    window.location.href='home'
+  }
 }

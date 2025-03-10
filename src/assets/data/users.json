@@ -1,10 +1,22 @@
 {
+  "users": [
+    {
+      "email": "123@123.com",
+      "password": "$2a$10$dY/qLqjRqZy4iqoCCcoy4ujw6znaoPwxQVsmS9iRmfhwb2irdaJAy",
+      "id": 100
+    },
+    {
+      "email": "123@1234.com",
+      "password": "$2a$10$e.Pnw4dqK0lguN4TIoCyBeT5E8bGbzDiVWbeBWII/3CskRohTB6bi",
+      "id": 101
+    }
+  ],
   "Productos": [
     {
       "id": "1",
       "nombre": "Laptop HP Victus 15",
       "descripcion": "Laptop gaming con procesador Intel Core i5 y GPU RTX 3050.",
-      "precio": 850.99,
+      "precio": 700,
       "imagen": "https://novatecsa.com/wp-content/uploads/2024/09/HP-Victus-15-fa0033dx-5.jpg"
     },
     {
@@ -88,8 +100,15 @@
       "id": "dc68",
       "nombre": "Playstation 3",
       "descripcion": "Consola de videojuegos Playstation 3",
-      "precio": "180",
+      "precio": 249.99,
       "imagen": "https://retropixl.com/cdn/shop/products/RetroPixl_Retrogaming_Playstation_3_PS3_Slim_Red.jpg?v=1502512002"
+    },
+    {
+      "nombre": "Nntendo Switch",
+      "descripcion": "Consola de Nintendo",
+      "precio": "349",
+      "imagen": "https://m.media-amazon.com/images/I/71wpE+ZIehL.jpg",
+      "id": "ce-0cQj"
     }
   ]
 }
